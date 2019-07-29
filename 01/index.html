@@ -17,11 +17,13 @@
 
     <ul>
       <li v-for="fruit of fruits">
-        <input type="number" v-model.number="fruit.cant"> - {{fruit.name}}
+        <input type="number" v-model.number="fruit.cant">
+        <button @click="fruit.cant++">+ </button> - {{fruit.name}}
         <span v-if="fruit.cant===0"> - withot stck</span>
       </li>
 
     </ul>
+    <h4>Total {{sumFruits}}</h4>
   </div>
 
   <!-- development version, includes helpful console warnings -->

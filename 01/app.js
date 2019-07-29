@@ -7,7 +7,8 @@ const app = new Vue({
       { name: 'orange', cant: 0 },
       { name: 'pineapple', cant: 10 },
     ],
-    newFruit: ''
+    newFruit: '',
+    total: 0,
   },
   methods: {
     addFruit() {
@@ -16,6 +17,15 @@ const app = new Vue({
         cant: 0,
       });
       this.newFruit = '';
+    }
+  },
+  computed: {
+    sumFruits() {
+      this.total = 0;
+      for (const fruit of this.fruits) {
+        this.total = this.total + fruit.cant;
+      }
+      return this.total;
     }
   }
 })
