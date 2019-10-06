@@ -19,7 +19,7 @@
       <li v-for="fruit of fruits">
         <input type="number" v-model.number="fruit.cant">
         <button @click="fruit.cant++">+ </button> - {{fruit.name}}
-        <span v-if="fruit.cant===0"> - withot stck</span>
+        <span v-if="fruit.cant<=0"> - withot stck</span>
       </li>
 
     </ul>
